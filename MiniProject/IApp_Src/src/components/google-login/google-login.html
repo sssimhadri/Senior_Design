@@ -1,0 +1,26 @@
+<!-- Generated template for the GoogleLoginComponent component -->
+<div *ngIf="(user | async) || {} as user">
+
+	<button ion-button full outline
+			*ngIf="!user.uid"
+			(tap)="googleLogin()">
+
+			Login with Google
+	</button>
+
+	
+	<div *ngIf="pushHome(user.uid)">
+		<!--
+		You're already logged in with UID: {{ user.uid }}
+		
+		<button ion-button (tap)="signOut()">
+        	Signout
+        </button>
+        <button ion-button (tap)="pushHome()">
+        	Go to Home
+        </button>
+        -->
+	</div>
+	
+
+</div>
